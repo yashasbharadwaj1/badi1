@@ -13,10 +13,9 @@ export default function LoginScreen() {
 
     const unsubscribe=auth.onAuthStateChanged(user =>{
       if (user){
-        navigation.navigate("Home")
+        navigation.navigate("Restaurants")
       }
     })
-
     return unsubscribe
 
   },[])
