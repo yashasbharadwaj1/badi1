@@ -1,5 +1,5 @@
 import {useNavigation} from "@react-navigation/native"
-import { View, Text, Image, TouchableOpacity,Button } from "react-native";
+import { View, Text, Image, TouchableOpacity,Button,ScrollView } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import React from 'react';
  const localRestaurants = [
@@ -38,6 +38,7 @@ const RestaurantItem = () => {
 
   return (
     <>
+    <ScrollView>
     {localRestaurants.map((restaurant,index)=>(
      <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate("Home")} title="details">
          
@@ -54,11 +55,18 @@ const RestaurantItem = () => {
      
     
       </TouchableOpacity>  
+      
       ))} 
+      </ScrollView>
    </>
   );
   
 }
+
+
+useEffect(() => {
+  setProducts(getProducts());
+});
 export default RestaurantItem
 const RestaurantImage=(props) =>(
     <>
@@ -67,9 +75,7 @@ const RestaurantImage=(props) =>(
     }}
     style={{width: "100%", height:180}}
     />
-   <TouchableOpacity style={{position: "absolute",right:20,}} >
-     <MaterialCommunityIcons name="heart-outline" size={25} color='white'></MaterialCommunityIcons>
-   </TouchableOpacity>
+
   
     </>
   );

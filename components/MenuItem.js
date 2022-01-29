@@ -4,18 +4,20 @@ import BouncyCheckbox from 'react-native-bouncy-checkbox';
 
 const foods = [
   {
+  id:1,
    title:"biriyani",
    description:"hot and spicy",
    price:" 150 Rupees",
    image:"https://www.freepik.com/free-photo/indian-chicken-biryani-served-terracotta-bowl-with-yogurt-white-background-selective-focus_20051621.htm#query=biriyani&position=0&from_view=search",
   },
-  {
+  {id:2,
     title:"masala dosa",
     description:"roasted with love",
     price:" 100 Rupees",
     image:"https://www.freepik.com/free-photo/delicious-indian-dosa-composition_17876226.htm#query=masala%20dosa&position=0&from_view=search",
   },
   {
+    id:3,
     title:"pani puri",
     description:"food u dont wannna miss",
     price:" 60 Rupees",
@@ -47,7 +49,7 @@ export default function MenuItem() {
         <View style={styles.menuItemStyle}>
           <BouncyCheckbox 
             iconStyle={{ borderColor: "lightgray", borderRadius: 0 }}
-            fillColor="green" />
+                fillColor="green" />
           <FoodInfo food={food} />
           <FoodImage food={food} />
         </View>
@@ -75,4 +77,4 @@ const FoodImage =(props) =>(
       }}
        />
   </View>
-);
+)

@@ -8,7 +8,7 @@ export default function ViewCart() {
       alignItems:"center",
       flexDirection:"row",
       position:"absolute",
-      bottom:130,
+      bottom:110,
       zIndex:199,
     }}>
     <View style={{ 

@@ -8,12 +8,20 @@ import LogoutScreen from "./screens/LogoutScreen";
 import RestaurantDetail from "./screens/RestaurantDetail";
 import ViewCart from "./components/ViewCart";
 import RestaurantItem from './components/RestaurantItem';
-const Stack = createNativeStackNavigator();
+
+
+
 export default function App() {
+  const Stack = createNativeStackNavigator();
   return (
+   
+    
    <NavigationContainer>
    <Stack.Navigator>
    <Stack.Screen options={{headerShown:false}}name="Login" component={LoginScreen} />
+
+
+
    <Stack.Screen name="Home" component={HomeScreen} />
    <Stack.Screen name="RestaurantDetails" component={RestaurantDetail} />
    <Stack.Screen name="cart" component={ViewCart} />
@@ -21,6 +29,8 @@ export default function App() {
    <Stack.Screen name="Logout" component={LogoutScreen} />
    </Stack.Navigator >
    </NavigationContainer >
+
+   
   );
 }
 
